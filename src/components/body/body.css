@@ -1,0 +1,39 @@
+.bodycontainer {
+    margin: 0 2%;
+}
+
+.banner {
+    width: 100%;
+    height: 60vh;
+    background-color: black;
+    padding: 10px 0;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.banner p {
+    background-color: black;
+    color: whitesmoke;
+    font-size: xx-large;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.websiteHolder-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
