@@ -1,38 +1,83 @@
+* {
+    background-color: #f4f7f6;
+    text-align: center;
+}
+
 .App {
-  text-align: center;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    background: #f4f7f6;
+    z-index: 2;
+    transition: transform 0.5s ease-in-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    position: sticky;
+    top: 0;
+    height: auto;
+    line-height: 73px;
+    font-size: 13px;
+    font-weight: 400;
+    background-color: #f4f7f6;
+    z-index: 302;
+    transition: all 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-main {
+    width: 100%;
+    border-bottom: 1px solid #E6EAEA;
+    display: grid;
+    grid-template-columns: 10% 70% 20%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header-main>div {
+    cursor: pointer;
+    border-right: 1px solid #E6EAEA;
 }
 
-.App-link {
-  color: #61dafb;
+.searchBox-container {
+    background-color: antiquewhite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box_filter {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #E6EAEA;
+}
+
+.box-filter-main {
+    position: relative;
+    height: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin: 0;
+    line-height: 73px;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.menu-filter {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-filter li {
+    width: 100px;
+}
+
+.item {
+    border-right: 1px solid #E6EAEA;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, all 0.3s ease-in-out;
 }
