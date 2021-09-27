@@ -8,14 +8,13 @@ import './websiteholder.css';
 // `;
 const StyledView = styled.div`
     padding: 10px 15px;
-    width: 400px;
-    height: 300px;
+    width: 370px;
+    height: 400px;
 `;
 
 const Holder =  styled.div`
-    width: 400px;
-    height: 300px;
-    background-color: blue;
+    width: 370px;
+    height: 400px;
 `;
 export class websiteholder extends Component {
     render() {
@@ -27,6 +26,16 @@ export class websiteholder extends Component {
                                 
                         </div>
                         <div className="options"></div>
+                    </div>
+                    <div className="InfoContainer">
+                        <p>name of the website</p>
+                        <div className="From">
+                            <p>from content</p>
+                            <p>date</p>
+                        </div>
+                        <div className="ProductStatus">
+                            <p>In purchase</p>
+                        </div>
                     </div>
                 </Holder>
             </StyledView>

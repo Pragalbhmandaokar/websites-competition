@@ -1,10 +1,15 @@
 import React from 'react'
 
+
 export default function header() {
+
+    function handleClick() {
+         window.alert("Menu Open from left side");
+      }
     return (
         <div className="header"> 
             <div className="header-main">
-                <div className="box-left">Menu</div>
+                <div className="box-left" onClick={handleClick}>Menu</div>
                 <div className="box-middle">Competetion</div>
                 <div className="searchBox-container">Submit your WEBSITE</div>
             </div>
