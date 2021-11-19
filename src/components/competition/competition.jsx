@@ -21,8 +21,11 @@ export class competition extends Component {
                     <Holder>{this.competition_name}</Holder>    
                 </div>
                 <div className="CPage_Body">
-                {Array.from({ length: 10 }, (_, i) =>  <Websiteholder></Websiteholder>)}
-                   
+                    <uL className="websiteHolder-panel">
+                        {
+                            Array.from({ length: 8 }, (_, i) => <li> <Websiteholder></Websiteholder></li>)
+                        }
+                    </uL>
                 </div>
             </div>
         )

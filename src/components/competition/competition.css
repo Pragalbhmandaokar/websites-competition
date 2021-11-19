@@ -1,3 +1,15 @@
+.websiteHolder-panel {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
 .compettionPage_container {
     margin: 20px 0;
 }

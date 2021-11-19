@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components';
 import './websiteholder.css';
-// const Title = styled.h1`
-//   font-size: 1.5em;
-//   text-align: center;
-//   color: palevioletred;
-// `;
+import {Link, BrowserRouter as Router,} from 'react-router-dom';
+
 const StyledView = styled.div`
     padding: 10px 15px;
     width: 370px;
@@ -16,17 +13,23 @@ const Holder =  styled.div`
     width: 370px;
     height: 400px;
 `;
+
+
 export class websiteholder extends Component {
     render() {
+        const website = "https:google.com";
+
         return (
             <StyledView>
+                <Router>
                 <Holder>
+                <a target="_blank" href={website}>
                     <div className="webHolder">
-                        <div className="optionHolder">
-                                
+                        <div className="optionHolder">    
                         </div>
                         <div className="options"></div>
                     </div>
+                </a>
                     <div className="InfoContainer">
                         <p>name of the website</p>
                         <div className="From">
@@ -38,6 +41,7 @@ export class websiteholder extends Component {
                         </div>
                     </div>
                 </Holder>
+                </Router>
             </StyledView>
         )
     }

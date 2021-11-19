@@ -1,0 +1,261 @@
+.submissionContainer {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: #f4f7f6;
+    color: black;
+    text-align: left;
+}
+
+.inner {
+    position: relative;
+    width: 30%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 66px;
+    padding-right: 66px;
+    clear: both;
+    background-color: #f4f7f6;
+}
+
+.breadcrumb-submit {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 50px 0;
+    font-weight: 300;
+    overflow: hidden;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+* {
+    background-color: #f4f7f6;
+    text-align: center;
+}
+
+body {
+    margin: auto;
+    font-family: "apercu", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #f4f7f6;
+    background: #f4f7f6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.box-form-fields ul {
+    clear: both;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+div {
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+li:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.box-form-fields .row {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 7 px 0;
+}
+
+.box-form-fields .row .left {
+    width: 28%;
+    padding-right: 0;
+}
+
+.breadcrumb-submit li {
+    width: 40%;
+    padding: 0 0 0 2px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.breadcrumb-submit li span {
+    display: block;
+    padding: 15px 0 0 40px;
+    border-top: 8px solid #202121;
+    color: #131313;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+
+/* .box-form-fields {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 30px 40px;
+    background-color: #fff;
+    text-align: left;
+    font-size: 16px;
+} */
+
+li .active a,
+.breadcrumb-submit li .active span {
+    font-weight: bold;
+}
+
+.box-form-fields ul {
+    clear: both;
+}
+
+.box-form-fields .row .left {
+    width: 28%;
+    padding-right: 0;
+}
+
+.box-form-fields .row {
+    position: relative;
+    float: left;
+    text-align: left;
+    width: 100%;
+    margin: 7px 0;
+}
+
+.box-form-fields {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 30px 40px;
+    background-color: #fff;
+    text-align: left;
+    font-size: 16px;
+}
+
+.choices__list--dropdown {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #DBE0DF;
+    top: 100%;
+    margin-top: -1px;
+    overflow: hidden;
+    word-break: break-all;
+    z-index: 2;
+}
+
+box-form-fields .row .left>label {
+    height: 60px;
+    margin: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 10px;
+    line-height: 60px;
+    overflow: hidden;
+}
+
+.box-form-fields .row .right {
+    float: right;
+    width: 72%;
+    padding-left: 0;
+}
+
+.form-group {
+    position: relative;
+    display: block;
+}
+
+.box-form-fields .row .text-input {
+    width: 100%;
+}
+
+input[type=submit],
+input[type=text] {
+    -webkit-appearance: none;
+}
+
+.text-input {
+    display: block;
+    height: 60px;
+    padding: 0 15px;
+    background-color: #fff;
+    border: 1px solid #dbe0df;
+    transition: all .3s ease-in-out;
+}
+
+.choices[data-type*="select-multiple"] .choices__inner,
+.choices[data-type*="text"] .choices__inner {
+    padding-bottom: 5px;
+    cursor: text;
+}
+
+.choices__inner {
+    display: inline-block;
+    width: 100%;
+    min-height: 60px;
+    border: 1px solid #DBE0DF;
+    background-color: #fff;
+    line-height: 48px;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.choices[data-type*=select-multiple] .choices__input .is-hidden,
+.choices[data-type*=select-one] .choices__input .is-hidden,
+.choices__input .is-hidden {
+    display: none;
+}
+
+input,
+textarea,
+select,
+button {
+    font-family: "apercu", sans-serif;
+    font-size: 16px;
+    color: #202121;
+}
+
+input[type=submit],
+input[type=text] {
+    -webkit-appearance: none;
+}
+
+.choices__list--multiple {
+    display: inline;
+    padding-bottom: 5px;
+}
+
+.choices__list--dropdown .choices__list {
+    position: relative;
+    max-height: 390px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    will-change: scroll-position;
+}
+
+.choices__list--dropdown .choices__item {
+    position: relative;
+    padding: 10 px 15 px;
+    line-height: normal;
+    transition: all 0.3s;
+}

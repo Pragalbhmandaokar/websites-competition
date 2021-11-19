@@ -12,15 +12,6 @@ export default function body() {
                 <div className="websiteHolder-container">
                     <WebsiteHolder></WebsiteHolder>
                     <WebsiteHolder></WebsiteHolder>
-                    <WebsiteHolder></WebsiteHolder>
-                    <WebsiteHolder></WebsiteHolder>
-                    <WebsiteHolder></WebsiteHolder>
-                    <WebsiteHolder></WebsiteHolder>
-                    <WebsiteHolder></WebsiteHolder>
-                    <WebsiteHolder></WebsiteHolder>
-                    <WebsiteHolder></WebsiteHolder>
-                    <WebsiteHolder></WebsiteHolder>
-                    <WebsiteHolder></WebsiteHolder>
                 </div>
             </div>
       </section>
