@@ -3,11 +3,11 @@ import './App.css';
 //import Header from './components/header/header';
 //import Body from './components/body/body';
 import Competition from './components/competition/competition';
-import Submission from './components/upload/submission';
+// import Submission from './components/upload/submission';
 function App() {
   return (
     <div className="App">
-      <Submission></Submission>
+      {/* <Submission></Submission> */}
       {<Competition></Competition>}
       {/* <Body></Body> */}
     </div>
