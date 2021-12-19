@@ -75,6 +75,11 @@ const LoginScreen = ({ history }) => {
             Submit
           </Button>
         </Form>
+        <Row className="pt-3">
+          <Col>
+            <Link to="/otpForm">Reset your password </Link>
+          </Col>
+        </Row>
         <Row className="py-3">
           <Col>
             New Customer ? <Link to="/register">Register Here</Link>
