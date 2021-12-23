@@ -26,23 +26,18 @@ const RegisterScreen = () => {
     if (password !== confirmpassword) {
       setMessage("Passwords Do not Match");
     } else {
-      setMessage(null);
-      try {
-        const config = {
-          headers: {
-            "Content-type": "application/json",
-          },
-        };
-        setLoading(true);
-        const { data } = await axios.post(
-          "/api/users",
-          { name, pic, email, password },
-          config
-        );
-        setLoading(false);
-        localStorage.setItem("userInfo", JSON.stringify(data));
-        navigate("/myinfo");
-      } catch (error) {}
+
+      const data = { name, pic, email, password };
+      localStorage.setItem("userCheck", JSON.stringify(data));
+      let url = "/api/users/email-sender";
+      let options = {
+        method: "POST",
+        url: url,
+        data: { email: email },
+      };
+      let response = await axios(options);
+      let record = response.data;
+      navigate("/verify")
     }
   };
   useEffect(() => {
@@ -73,7 +68,7 @@ const RegisterScreen = () => {
         .catch((err) => {
           console.log(err);
         });
-    }else{
+    } else {
       return setPicMessage("Please Select and Image");
     }
   };
@@ -139,7 +134,7 @@ const RegisterScreen = () => {
           </Form.Group>
 
           <Button variant="primary" type="submit">
-            Register
+            Proceed
           </Button>
         </Form>
         <Row className="py-3">
@@ -151,5 +146,4 @@ const RegisterScreen = () => {
     </MainScreen>
   );
 };
-
 export default RegisterScreen;

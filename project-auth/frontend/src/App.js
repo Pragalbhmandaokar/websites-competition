@@ -7,6 +7,7 @@ import { BrowserRouter , Routes , Route } from "react-router-dom";
 import LoginScreen from "./screens/LoginScreen/LoginScreen";
 import OtpForm from "./screens/LoginScreen/OtpForm";
 import RegisterScreen from "./screens/RegisterScreen/RegisterScreen";
+import Verification from "./screens/RegisterScreen/Verification";
 const App = () => (
   <BrowserRouter>
     <Header />
@@ -15,6 +16,7 @@ const App = () => (
         <Route path="/" element={<LandingPage />} exact />
         <Route path="/login" element={<LoginScreen />} exact />
         <Route path="/register" element={<RegisterScreen />} exact />
+        <Route path="/verify" element={<Verification/>} exact />
         <Route path="/myinfo" element={<MyInformation />} />
         <Route path="/otpForm" element={<OtpForm />} />
       </Routes>
