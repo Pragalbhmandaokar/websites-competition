@@ -21,13 +21,8 @@ function OtpForm() {
       let response = await axios(options);
       let record = response.data;
       if (record.statusText == "Success") {
-        //   localStorage.setItem('token',response.data.token)
-        //   setTimeout(() => {
-        //     navigate('/')
-        //   },1500)
         console.log(toggle);
         toggleForm(false);
-        // console.log(toggle);
       } else {
         console.log("Error");
       }

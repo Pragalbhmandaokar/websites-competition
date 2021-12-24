@@ -21,6 +21,7 @@ const registerUser = asyncHandler(async (req, res) => {
   const userExists = await User.findOne({ email });
 
   if (userExists) {
+    setLoading(false);
     res.status(404);
     throw new Error("User already exists");
   }
@@ -84,6 +85,20 @@ const emailSend = asyncHandler(async (req, res) => {
   }
   res.status(200).json(responseType);
 });
+const emailSender = asyncHandler(async (req,res) => {
+  const responseType = {};
+    let otpcode = Math.floor(Math.random() * 10000 + 1);
+    let otpData = new Otp({
+      email: req.body.email,
+      code: otpcode,
+      expireIn: new Date().getTime() + 300 * 1000,
+    });
+    mailer(otpData.email, otpData.code);
+    let otpResponse = await otpData.save();
+    responseType.statusText = "Success";
+    responseType.message = "Please check your Email ID";
+    res.status(200).json(responseType);
+})
 const mailer = async(email, otp) => {
   const accessToken  = await oAuth2Client.getAccessToken()
   var nodemailer = require("nodemailer");
@@ -139,4 +154,29 @@ const changePassword = asyncHandler(async (req, res) => {
   }
   res.status(200).json(response);
 });
-module.exports = { registerUser, authUser, emailSend, changePassword };
+const verifyPassword = asyncHandler(async(req,res)=>{
+  let data = await Otp.findOne({
+    email: req.body.email,
+    code: req.body.otpCode,
+  });
+  const response = {};
+  if (data) {
+    let currentTime = new Date().getTime();
+    let diff = (data.expireIn - currentTime) / 1000;
+    if (diff < 0) {
+      response.message = "Token expired";
+      response.statusText = "Error";
+    } else {
+      // let user = await User.findOne({ email: req.body.email });
+      // user.password = req.body.password;
+      // user.save();
+      response.message = "Verified Successfully successfully";
+      response.statusText = "Success";
+    }
+  } else {
+    response.message = "Invalid OTP";
+    response.statusText = "error";
+  }
+  res.status(200).json(response);
+})
+module.exports = { registerUser, authUser, emailSend, changePassword ,verifyPassword,emailSender};
